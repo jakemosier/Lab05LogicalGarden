@@ -24,14 +24,17 @@ public class GardenHelper {
         }
     }
     /*
-       BRAINSTORM FOR ADDROW() HERE
+       For addRow, the program is comparing if the pH or light levels are good for the plants that are in the row. 
      */
     public boolean addRow(int row, int pH, String light) {
-        //TODO student
+        if(row > 0 && row < 4)
+        {
+            return true;
+        }
         return false;
     }
     /*
-        DESCRIPTION OF ADDPLANT() HERE
+        AddPlant takes in two paramters. Seeing if the plant can acutal be planted in that row with that rows pH and Light Levels. 
      */
     public boolean addPlant(String plantName, int row) {
         if(canPlant(plantName, searchRow(row))){
